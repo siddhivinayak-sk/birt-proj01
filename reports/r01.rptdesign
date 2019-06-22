@@ -1,0 +1,2985 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
+    <property name="createdBy">Eclipse BIRT Designer Version 4.8.0.v201806261756</property>
+    <property name="units">mm</property>
+    <property name="iconFile">/templates/blank_report.gif</property>
+    <property name="bidiLayoutOrientation">ltr</property>
+    <property name="imageDPI">96</property>
+    <parameters>
+        <scalar-parameter name="tid" id="6">
+            <property name="valueType">static</property>
+            <property name="dataType">string</property>
+            <property name="distinct">true</property>
+            <list-property name="selectionList"/>
+            <property name="paramType">simple</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+    </parameters>
+    <data-sources>
+        <oda-data-source extensionID="org.eclipse.birt.report.data.oda.jdbc" name="DataSource01" id="4">
+            <list-property name="privateDriverProperties">
+                <ex-property>
+                    <name>metadataBidiFormatStr</name>
+                    <value>ILYNN</value>
+                </ex-property>
+                <ex-property>
+                    <name>disabledMetadataBidiFormatStr</name>
+                </ex-property>
+                <ex-property>
+                    <name>contentBidiFormatStr</name>
+                    <value>ILYNN</value>
+                </ex-property>
+                <ex-property>
+                    <name>disabledContentBidiFormatStr</name>
+                </ex-property>
+            </list-property>
+            <property name="odaDriverClass">org.apache.derby.jdbc.ClientDriver</property>
+            <property name="odaURL">jdbc:derby://localhost:1527/sample</property>
+            <property name="odaUser">user</property>
+            <encrypted-property name="odaPassword" encryptionID="base64">YXBw</encrypted-property>
+        </oda-data-source>
+    </data-sources>
+    <data-sets>
+        <oda-data-set extensionID="org.eclipse.birt.report.data.oda.jdbc.JdbcSelectDataSet" name="DataSet01" id="5">
+            <list-property name="columnHints">
+                <structure>
+                    <property name="columnName">TID</property>
+                    <text-property name="displayName">TID</text-property>
+                    <text-property name="heading">TID</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">DEL_AT</property>
+                    <text-property name="displayName">DEL_AT</text-property>
+                    <text-property name="heading">DEL_AT</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">DEL_METHOD</property>
+                    <text-property name="displayName">DEL_METHOD</text-property>
+                    <text-property name="heading">DEL_METHOD</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">DEL_BY</property>
+                    <text-property name="displayName">DEL_BY</text-property>
+                    <text-property name="heading">DEL_BY</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">DEL_TO</property>
+                    <text-property name="displayName">DEL_TO</text-property>
+                    <text-property name="heading">DEL_TO</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">DEL_ADDRESS</property>
+                    <text-property name="displayName">DEL_ADDRESS</text-property>
+                    <text-property name="heading">DEL_ADDRESS</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">DEL_PIN</property>
+                    <text-property name="displayName">DEL_PIN</text-property>
+                    <text-property name="heading">DEL_PIN</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">OUR_REF</property>
+                    <text-property name="displayName">OUR_REF</text-property>
+                    <text-property name="heading">OUR_REF</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">YOUR_REF</property>
+                    <text-property name="displayName">YOUR_REF</text-property>
+                    <text-property name="heading">YOUR_REF</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">MISC_REF</property>
+                    <text-property name="displayName">MISC_REF</text-property>
+                    <text-property name="heading">MISC_REF</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">CHEQUE_NO</property>
+                    <text-property name="displayName">CHEQUE_NO</text-property>
+                    <text-property name="heading">CHEQUE_NO</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">DEL_DATE</property>
+                    <text-property name="displayName">DEL_DATE</text-property>
+                    <text-property name="heading">DEL_DATE</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">DRAWN_ON</property>
+                    <text-property name="displayName">DRAWN_ON</text-property>
+                    <text-property name="heading">DRAWN_ON</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">PAYABLE_AT</property>
+                    <text-property name="displayName">PAYABLE_AT</text-property>
+                    <text-property name="heading">PAYABLE_AT</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">AMT</property>
+                    <text-property name="displayName">AMT</text-property>
+                    <text-property name="heading">AMT</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">CUSTOMER_DET</property>
+                    <text-property name="displayName">CUSTOMER_DET</text-property>
+                    <text-property name="heading">CUSTOMER_DET</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">BANK_REF</property>
+                    <text-property name="displayName">BANK_REF</text-property>
+                    <text-property name="heading">BANK_REF</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">CHK_DATE</property>
+                    <text-property name="displayName">CHK_DATE</text-property>
+                    <text-property name="heading">CHK_DATE</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">PAY_TO</property>
+                    <text-property name="displayName">PAY_TO</text-property>
+                    <text-property name="heading">PAY_TO</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">AMT_WORDS</property>
+                    <text-property name="displayName">AMT_WORDS</text-property>
+                    <text-property name="heading">AMT_WORDS</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">AMT_NUMBER</property>
+                    <text-property name="displayName">AMT_NUMBER</text-property>
+                    <text-property name="heading">AMT_NUMBER</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">AC_NO</property>
+                    <text-property name="displayName">AC_NO</text-property>
+                    <text-property name="heading">AC_NO</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">BD_CODE</property>
+                    <text-property name="displayName">BD_CODE</text-property>
+                    <text-property name="heading">BD_CODE</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">AUTH_SIGN1</property>
+                    <text-property name="displayName">AUTH_SIGN1</text-property>
+                    <text-property name="heading">AUTH_SIGN1</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">AUTH_SIGN2</property>
+                    <text-property name="displayName">AUTH_SIGN2</text-property>
+                    <text-property name="heading">AUTH_SIGN2</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">MICR_LINE</property>
+                    <text-property name="displayName">MICR_LINE</text-property>
+                    <text-property name="heading">MICR_LINE</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">A_SIGN_IC1</property>
+                    <text-property name="displayName">A_SIGN_IC1</text-property>
+                    <text-property name="heading">A_SIGN_IC1</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">A_SIGN_IC2</property>
+                    <text-property name="displayName">A_SIGN_IC2</text-property>
+                    <text-property name="heading">A_SIGN_IC2</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">C_LOGO1</property>
+                    <text-property name="displayName">C_LOGO1</text-property>
+                    <text-property name="heading">C_LOGO1</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">C_LOGO2</property>
+                    <text-property name="displayName">C_LOGO2</text-property>
+                    <text-property name="heading">C_LOGO2</text-property>
+                </structure>
+            </list-property>
+            <structure name="cachedMetaData">
+                <list-property name="resultSet">
+                    <structure>
+                        <property name="position">1</property>
+                        <property name="name">TID</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">2</property>
+                        <property name="name">DEL_AT</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">3</property>
+                        <property name="name">DEL_METHOD</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">4</property>
+                        <property name="name">DEL_BY</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">5</property>
+                        <property name="name">DEL_TO</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">6</property>
+                        <property name="name">DEL_ADDRESS</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">7</property>
+                        <property name="name">DEL_PIN</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">8</property>
+                        <property name="name">OUR_REF</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">9</property>
+                        <property name="name">YOUR_REF</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">10</property>
+                        <property name="name">MISC_REF</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">11</property>
+                        <property name="name">CHEQUE_NO</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">12</property>
+                        <property name="name">DEL_DATE</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">13</property>
+                        <property name="name">DRAWN_ON</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">14</property>
+                        <property name="name">PAYABLE_AT</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">15</property>
+                        <property name="name">AMT</property>
+                        <property name="dataType">float</property>
+                    </structure>
+                    <structure>
+                        <property name="position">16</property>
+                        <property name="name">CUSTOMER_DET</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">17</property>
+                        <property name="name">BANK_REF</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">18</property>
+                        <property name="name">CHK_DATE</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">19</property>
+                        <property name="name">PAY_TO</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">20</property>
+                        <property name="name">AMT_WORDS</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">21</property>
+                        <property name="name">AMT_NUMBER</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">22</property>
+                        <property name="name">AC_NO</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">23</property>
+                        <property name="name">BD_CODE</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">24</property>
+                        <property name="name">AUTH_SIGN1</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">25</property>
+                        <property name="name">AUTH_SIGN2</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">26</property>
+                        <property name="name">MICR_LINE</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">27</property>
+                        <property name="name">A_SIGN_IC1</property>
+                        <property name="dataType">blob</property>
+                    </structure>
+                    <structure>
+                        <property name="position">28</property>
+                        <property name="name">A_SIGN_IC2</property>
+                        <property name="dataType">blob</property>
+                    </structure>
+                    <structure>
+                        <property name="position">29</property>
+                        <property name="name">C_LOGO1</property>
+                        <property name="dataType">blob</property>
+                    </structure>
+                    <structure>
+                        <property name="position">30</property>
+                        <property name="name">C_LOGO2</property>
+                        <property name="dataType">blob</property>
+                    </structure>
+                </list-property>
+            </structure>
+            <property name="dataSource">DataSource01</property>
+            <list-property name="resultSet">
+                <structure>
+                    <property name="position">1</property>
+                    <property name="name">TID</property>
+                    <property name="nativeName">TID</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">2</property>
+                    <property name="name">DEL_AT</property>
+                    <property name="nativeName">DEL_AT</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">3</property>
+                    <property name="name">DEL_METHOD</property>
+                    <property name="nativeName">DEL_METHOD</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">4</property>
+                    <property name="name">DEL_BY</property>
+                    <property name="nativeName">DEL_BY</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">5</property>
+                    <property name="name">DEL_TO</property>
+                    <property name="nativeName">DEL_TO</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">6</property>
+                    <property name="name">DEL_ADDRESS</property>
+                    <property name="nativeName">DEL_ADDRESS</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">7</property>
+                    <property name="name">DEL_PIN</property>
+                    <property name="nativeName">DEL_PIN</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">8</property>
+                    <property name="name">OUR_REF</property>
+                    <property name="nativeName">OUR_REF</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">9</property>
+                    <property name="name">YOUR_REF</property>
+                    <property name="nativeName">YOUR_REF</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">10</property>
+                    <property name="name">MISC_REF</property>
+                    <property name="nativeName">MISC_REF</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">11</property>
+                    <property name="name">CHEQUE_NO</property>
+                    <property name="nativeName">CHEQUE_NO</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">12</property>
+                    <property name="name">DEL_DATE</property>
+                    <property name="nativeName">DEL_DATE</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">13</property>
+                    <property name="name">DRAWN_ON</property>
+                    <property name="nativeName">DRAWN_ON</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">14</property>
+                    <property name="name">PAYABLE_AT</property>
+                    <property name="nativeName">PAYABLE_AT</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">15</property>
+                    <property name="name">AMT</property>
+                    <property name="nativeName">AMT</property>
+                    <property name="dataType">float</property>
+                    <property name="nativeDataType">8</property>
+                </structure>
+                <structure>
+                    <property name="position">16</property>
+                    <property name="name">CUSTOMER_DET</property>
+                    <property name="nativeName">CUSTOMER_DET</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">17</property>
+                    <property name="name">BANK_REF</property>
+                    <property name="nativeName">BANK_REF</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">18</property>
+                    <property name="name">CHK_DATE</property>
+                    <property name="nativeName">CHK_DATE</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">19</property>
+                    <property name="name">PAY_TO</property>
+                    <property name="nativeName">PAY_TO</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">20</property>
+                    <property name="name">AMT_WORDS</property>
+                    <property name="nativeName">AMT_WORDS</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">21</property>
+                    <property name="name">AMT_NUMBER</property>
+                    <property name="nativeName">AMT_NUMBER</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">22</property>
+                    <property name="name">AC_NO</property>
+                    <property name="nativeName">AC_NO</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">23</property>
+                    <property name="name">BD_CODE</property>
+                    <property name="nativeName">BD_CODE</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">24</property>
+                    <property name="name">AUTH_SIGN1</property>
+                    <property name="nativeName">AUTH_SIGN1</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">25</property>
+                    <property name="name">AUTH_SIGN2</property>
+                    <property name="nativeName">AUTH_SIGN2</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">26</property>
+                    <property name="name">MICR_LINE</property>
+                    <property name="nativeName">MICR_LINE</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">27</property>
+                    <property name="name">A_SIGN_IC1</property>
+                    <property name="nativeName">A_SIGN_IC1</property>
+                    <property name="dataType">blob</property>
+                    <property name="nativeDataType">2004</property>
+                </structure>
+                <structure>
+                    <property name="position">28</property>
+                    <property name="name">A_SIGN_IC2</property>
+                    <property name="nativeName">A_SIGN_IC2</property>
+                    <property name="dataType">blob</property>
+                    <property name="nativeDataType">2004</property>
+                </structure>
+                <structure>
+                    <property name="position">29</property>
+                    <property name="name">C_LOGO1</property>
+                    <property name="nativeName">C_LOGO1</property>
+                    <property name="dataType">blob</property>
+                    <property name="nativeDataType">2004</property>
+                </structure>
+                <structure>
+                    <property name="position">30</property>
+                    <property name="name">C_LOGO2</property>
+                    <property name="nativeName">C_LOGO2</property>
+                    <property name="dataType">blob</property>
+                    <property name="nativeDataType">2004</property>
+                </structure>
+            </list-property>
+            <xml-property name="queryText"><![CDATA[SELECT 
+TID,
+DEL_AT,
+DEL_METHOD,
+DEL_BY,
+DEL_TO,
+DEL_ADDRESS,
+DEL_PIN,
+OUR_REF,
+YOUR_REF,
+MISC_REF,
+CHEQUE_NO,
+DEL_DATE,
+DRAWN_ON,
+PAYABLE_AT,
+AMT ,
+CUSTOMER_DET,
+BANK_REF,
+CHK_DATE,
+PAY_TO,
+AMT_WORDS,
+AMT_NUMBER,
+AC_NO,
+BD_CODE,
+AUTH_SIGN1,
+AUTH_SIGN2,
+MICR_LINE,
+A_SIGN_IC1 ,
+A_SIGN_IC2 ,
+C_LOGO1 ,
+C_LOGO2 
+FROM 
+app.SPF_DETAILS
+]]></xml-property>
+            <xml-property name="designerValues"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<model:DesignValues xmlns:design="http://www.eclipse.org/datatools/connectivity/oda/design" xmlns:model="http://www.eclipse.org/birt/report/model/adapter/odaModel">
+  <Version>2.0</Version>
+  <design:ResultSets derivedMetaData="true">
+    <design:resultSetDefinitions>
+      <design:resultSetColumns>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>TID</design:name>
+              <design:position>1</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>20</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>TID</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>TID</design:label>
+            <design:formattingHints>
+              <design:displaySize>20</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>DEL_AT</design:name>
+              <design:position>2</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>50</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>DEL_AT</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>DEL_AT</design:label>
+            <design:formattingHints>
+              <design:displaySize>50</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>DEL_METHOD</design:name>
+              <design:position>3</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>50</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>DEL_METHOD</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>DEL_METHOD</design:label>
+            <design:formattingHints>
+              <design:displaySize>50</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>DEL_BY</design:name>
+              <design:position>4</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>50</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>DEL_BY</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>DEL_BY</design:label>
+            <design:formattingHints>
+              <design:displaySize>50</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>DEL_TO</design:name>
+              <design:position>5</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>50</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>DEL_TO</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>DEL_TO</design:label>
+            <design:formattingHints>
+              <design:displaySize>50</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>DEL_ADDRESS</design:name>
+              <design:position>6</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>50</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>DEL_ADDRESS</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>DEL_ADDRESS</design:label>
+            <design:formattingHints>
+              <design:displaySize>50</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>DEL_PIN</design:name>
+              <design:position>7</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>50</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>DEL_PIN</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>DEL_PIN</design:label>
+            <design:formattingHints>
+              <design:displaySize>50</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>OUR_REF</design:name>
+              <design:position>8</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>50</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>OUR_REF</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>OUR_REF</design:label>
+            <design:formattingHints>
+              <design:displaySize>50</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>YOUR_REF</design:name>
+              <design:position>9</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>50</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>YOUR_REF</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>YOUR_REF</design:label>
+            <design:formattingHints>
+              <design:displaySize>50</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>MISC_REF</design:name>
+              <design:position>10</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>50</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>MISC_REF</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>MISC_REF</design:label>
+            <design:formattingHints>
+              <design:displaySize>50</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>CHEQUE_NO</design:name>
+              <design:position>11</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>50</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>CHEQUE_NO</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>CHEQUE_NO</design:label>
+            <design:formattingHints>
+              <design:displaySize>50</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>DEL_DATE</design:name>
+              <design:position>12</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>10</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>DEL_DATE</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>DEL_DATE</design:label>
+            <design:formattingHints>
+              <design:displaySize>10</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>DRAWN_ON</design:name>
+              <design:position>13</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>50</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>DRAWN_ON</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>DRAWN_ON</design:label>
+            <design:formattingHints>
+              <design:displaySize>50</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>PAYABLE_AT</design:name>
+              <design:position>14</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>50</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>PAYABLE_AT</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>PAYABLE_AT</design:label>
+            <design:formattingHints>
+              <design:displaySize>50</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>AMT</design:name>
+              <design:position>15</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>8</design:nativeDataTypeCode>
+            <design:precision>15</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>AMT</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>AMT</design:label>
+            <design:formattingHints>
+              <design:displaySize>24</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>CUSTOMER_DET</design:name>
+              <design:position>16</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>50</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>CUSTOMER_DET</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>CUSTOMER_DET</design:label>
+            <design:formattingHints>
+              <design:displaySize>50</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>BANK_REF</design:name>
+              <design:position>17</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>50</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>BANK_REF</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>BANK_REF</design:label>
+            <design:formattingHints>
+              <design:displaySize>50</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>CHK_DATE</design:name>
+              <design:position>18</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>10</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>CHK_DATE</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>CHK_DATE</design:label>
+            <design:formattingHints>
+              <design:displaySize>10</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>PAY_TO</design:name>
+              <design:position>19</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>50</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>PAY_TO</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>PAY_TO</design:label>
+            <design:formattingHints>
+              <design:displaySize>50</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>AMT_WORDS</design:name>
+              <design:position>20</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>250</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>AMT_WORDS</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>AMT_WORDS</design:label>
+            <design:formattingHints>
+              <design:displaySize>250</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>AMT_NUMBER</design:name>
+              <design:position>21</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>250</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>AMT_NUMBER</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>AMT_NUMBER</design:label>
+            <design:formattingHints>
+              <design:displaySize>250</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>AC_NO</design:name>
+              <design:position>22</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>50</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>AC_NO</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>AC_NO</design:label>
+            <design:formattingHints>
+              <design:displaySize>50</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>BD_CODE</design:name>
+              <design:position>23</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>50</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>BD_CODE</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>BD_CODE</design:label>
+            <design:formattingHints>
+              <design:displaySize>50</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>AUTH_SIGN1</design:name>
+              <design:position>24</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>250</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>AUTH_SIGN1</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>AUTH_SIGN1</design:label>
+            <design:formattingHints>
+              <design:displaySize>250</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>AUTH_SIGN2</design:name>
+              <design:position>25</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>250</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>AUTH_SIGN2</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>AUTH_SIGN2</design:label>
+            <design:formattingHints>
+              <design:displaySize>250</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>MICR_LINE</design:name>
+              <design:position>26</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>250</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>MICR_LINE</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>MICR_LINE</design:label>
+            <design:formattingHints>
+              <design:displaySize>250</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>A_SIGN_IC1</design:name>
+              <design:position>27</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>2004</design:nativeDataTypeCode>
+            <design:precision>2147483647</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>A_SIGN_IC1</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>A_SIGN_IC1</design:label>
+            <design:formattingHints>
+              <design:displaySize>2147483647</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>A_SIGN_IC2</design:name>
+              <design:position>28</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>2004</design:nativeDataTypeCode>
+            <design:precision>2147483647</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>A_SIGN_IC2</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>A_SIGN_IC2</design:label>
+            <design:formattingHints>
+              <design:displaySize>2147483647</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>C_LOGO1</design:name>
+              <design:position>29</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>2004</design:nativeDataTypeCode>
+            <design:precision>2147483647</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>C_LOGO1</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>C_LOGO1</design:label>
+            <design:formattingHints>
+              <design:displaySize>2147483647</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>C_LOGO2</design:name>
+              <design:position>30</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>2004</design:nativeDataTypeCode>
+            <design:precision>2147483647</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>C_LOGO2</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>C_LOGO2</design:label>
+            <design:formattingHints>
+              <design:displaySize>2147483647</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+      </design:resultSetColumns>
+      <design:criteria/>
+    </design:resultSetDefinitions>
+  </design:ResultSets>
+</model:DesignValues>]]></xml-property>
+        </oda-data-set>
+    </data-sets>
+    <page-setup>
+        <simple-master-page name="Simple MasterPage" id="2">
+            <property name="type">a4</property>
+            <property name="topMargin">5px</property>
+            <property name="leftMargin">5px</property>
+            <property name="bottomMargin">0.020833333333333332in</property>
+            <property name="rightMargin">5px</property>
+            <property name="columnSpacing">0pt</property>
+            <property name="backgroundImage">images/page.png1</property>
+            <property name="backgroundRepeat">no-repeat</property>
+            <property name="backgroundSizeHeight">contain</property>
+            <property name="backgroundSizeWidth">contain</property>
+            <property name="showHeaderOnFirst">false</property>
+            <property name="showFooterOnLast">false</property>
+            <property name="headerHeight">0in</property>
+            <property name="footerHeight">0in</property>
+        </simple-master-page>
+    </page-setup>
+    <body>
+        <grid id="8">
+            <property name="height">294.2166666666667mm</property>
+            <column id="9"/>
+            <row id="10">
+                <property name="height">480px</property>
+                <cell id="11">
+                    <text id="292">
+                        <property name="contentType">auto</property>
+                        <text-property name="content"><![CDATA[ ]]></text-property>
+                    </text>
+                    <text id="293">
+                        <property name="contentType">auto</property>
+                        <text-property name="content"><![CDATA[ ]]></text-property>
+                    </text>
+                    <text id="294">
+                        <property name="contentType">auto</property>
+                        <text-property name="content"><![CDATA[ ]]></text-property>
+                    </text>
+                    <text id="295">
+                        <property name="contentType">auto</property>
+                        <text-property name="content"><![CDATA[ ]]></text-property>
+                    </text>
+                    <text id="296">
+                        <property name="contentType">auto</property>
+                        <text-property name="content"><![CDATA[ ]]></text-property>
+                    </text>
+                    <text id="297">
+                        <property name="contentType">auto</property>
+                        <text-property name="content"><![CDATA[ ]]></text-property>
+                    </text>
+                    <text id="298">
+                        <property name="contentType">auto</property>
+                        <text-property name="content"><![CDATA[ ]]></text-property>
+                    </text>
+                    <text id="299">
+                        <property name="contentType">auto</property>
+                        <text-property name="content"><![CDATA[ ]]></text-property>
+                    </text>
+                    <text id="300">
+                        <property name="contentType">auto</property>
+                        <text-property name="content"><![CDATA[ ]]></text-property>
+                    </text>
+                    <text id="301">
+                        <property name="contentType">auto</property>
+                        <text-property name="content"><![CDATA[ ]]></text-property>
+                    </text>
+                    <text id="302">
+                        <property name="contentType">auto</property>
+                        <text-property name="content"><![CDATA[ ]]></text-property>
+                    </text>
+                    <text id="303">
+                        <property name="contentType">auto</property>
+                        <text-property name="content"><![CDATA[ ]]></text-property>
+                    </text>
+                    <text id="304">
+                        <property name="contentType">auto</property>
+                        <text-property name="content"><![CDATA[ ]]></text-property>
+                    </text>
+                    <text id="305">
+                        <property name="contentType">auto</property>
+                        <text-property name="content"><![CDATA[ ]]></text-property>
+                    </text>
+                    <text id="306">
+                        <property name="contentType">auto</property>
+                        <text-property name="content"><![CDATA[ ]]></text-property>
+                    </text>
+                    <text id="307">
+                        <property name="contentType">auto</property>
+                        <text-property name="content"><![CDATA[ ]]></text-property>
+                    </text>
+                    <label id="428">
+                        <text-property name="text"> </text-property>
+                    </label>
+                </cell>
+            </row>
+            <row id="12">
+                <property name="height">2.90625in</property>
+                <cell id="13">
+                    <grid id="68">
+                        <property name="height">2.8645833333333335in</property>
+                        <column id="69">
+                            <property name="width">23px</property>
+                        </column>
+                        <column id="70">
+                            <property name="width">402px</property>
+                        </column>
+                        <column id="71">
+                            <property name="width">290px</property>
+                        </column>
+                        <column id="72"/>
+                        <row id="73">
+                            <property name="height">0.25in</property>
+                            <cell id="74">
+                                <property name="borderRightStyle">solid</property>
+                                <property name="borderRightWidth">medium</property>
+                            </cell>
+                            <cell id="75">
+                                <property name="borderLeftStyle">solid</property>
+                                <property name="borderLeftWidth">medium</property>
+                                <property name="borderRightStyle">solid</property>
+                                <property name="borderRightWidth">medium</property>
+                                <property name="borderTopStyle">solid</property>
+                                <property name="borderTopWidth">medium</property>
+                                <grid id="155">
+                                    <property name="width">4.125in</property>
+                                    <column id="156">
+                                        <property name="width">60px</property>
+                                    </column>
+                                    <column id="157"/>
+                                    <row id="158">
+                                        <cell id="159">
+                                            <property name="paddingTop">0pt</property>
+                                            <property name="paddingLeft">0pt</property>
+                                            <property name="paddingBottom">0pt</property>
+                                            <property name="paddingRight">0pt</property>
+                                            <property name="width">60px</property>
+                                            <label id="151">
+                                                <property name="fontFamily">sans-serif</property>
+                                                <property name="fontSize">7pt</property>
+                                                <property name="fontWeight">bold</property>
+                                                <property name="width">58px</property>
+                                                <text-property name="text">Delivery At:</text-property>
+                                            </label>
+                                        </cell>
+                                        <cell id="160">
+                                            <data id="276">
+                                                <property name="fontFamily">sans-serif</property>
+                                                <property name="fontSize">7pt</property>
+                                                <property name="dataSet">DataSet01</property>
+                                                <list-property name="boundDataColumns">
+                                                    <structure>
+                                                        <property name="name">DEL_AT</property>
+                                                        <text-property name="displayName">DEL_AT</text-property>
+                                                        <expression name="expression" type="javascript">dataSetRow["DEL_AT"]</expression>
+                                                        <property name="dataType">string</property>
+                                                    </structure>
+                                                </list-property>
+                                                <property name="resultSetColumn">DEL_AT</property>
+                                            </data>
+                                        </cell>
+                                    </row>
+                                </grid>
+                            </cell>
+                            <cell id="76">
+                                <property name="borderLeftStyle">solid</property>
+                                <property name="borderLeftWidth">medium</property>
+                                <property name="borderRightStyle">solid</property>
+                                <property name="borderRightWidth">medium</property>
+                                <property name="borderTopStyle">solid</property>
+                                <property name="borderTopWidth">medium</property>
+                                <grid id="201">
+                                    <column id="202">
+                                        <property name="width">80px</property>
+                                    </column>
+                                    <column id="203"/>
+                                    <row id="204">
+                                        <cell id="205">
+                                            <label id="207">
+                                                <property name="fontFamily">sans-serif</property>
+                                                <property name="fontSize">7pt</property>
+                                                <property name="fontWeight">bold</property>
+                                                <property name="paddingTop">0pt</property>
+                                                <property name="paddingLeft">0pt</property>
+                                                <property name="paddingBottom">0pt</property>
+                                                <property name="paddingRight">0pt</property>
+                                                <property name="textAlign">right</property>
+                                                <property name="width">75px</property>
+                                                <text-property name="text">Our Ref:</text-property>
+                                            </label>
+                                        </cell>
+                                        <cell id="206">
+                                            <data id="282">
+                                                <property name="fontFamily">sans-serif</property>
+                                                <property name="fontSize">7pt</property>
+                                                <property name="dataSet">DataSet01</property>
+                                                <list-property name="boundDataColumns">
+                                                    <structure>
+                                                        <property name="name">OUR_REF</property>
+                                                        <text-property name="displayName">OUR_REF</text-property>
+                                                        <expression name="expression" type="javascript">dataSetRow["OUR_REF"]</expression>
+                                                        <property name="dataType">string</property>
+                                                    </structure>
+                                                </list-property>
+                                                <property name="resultSetColumn">OUR_REF</property>
+                                            </data>
+                                        </cell>
+                                    </row>
+                                </grid>
+                            </cell>
+                            <cell id="77"/>
+                        </row>
+                        <row id="78">
+                            <cell id="79">
+                                <property name="borderRightStyle">solid</property>
+                                <property name="borderRightWidth">medium</property>
+                            </cell>
+                            <cell id="80">
+                                <property name="borderLeftStyle">solid</property>
+                                <property name="borderLeftWidth">medium</property>
+                                <property name="borderRightStyle">solid</property>
+                                <property name="borderRightWidth">medium</property>
+                                <grid id="162">
+                                    <column id="163">
+                                        <property name="width">45px</property>
+                                    </column>
+                                    <column id="164"/>
+                                    <row id="165">
+                                        <cell id="166">
+                                            <label id="168">
+                                                <property name="fontFamily">sans-serif</property>
+                                                <property name="fontSize">7pt</property>
+                                                <property name="fontWeight">bold</property>
+                                                <property name="width">58px</property>
+                                                <text-property name="text">Method:</text-property>
+                                            </label>
+                                        </cell>
+                                        <cell id="167">
+                                            <data id="277">
+                                                <property name="fontFamily">sans-serif</property>
+                                                <property name="fontSize">7pt</property>
+                                                <property name="dataSet">DataSet01</property>
+                                                <list-property name="boundDataColumns">
+                                                    <structure>
+                                                        <property name="name">DEL_METHOD</property>
+                                                        <text-property name="displayName">DEL_METHOD</text-property>
+                                                        <expression name="expression" type="javascript">dataSetRow["DEL_METHOD"]</expression>
+                                                        <property name="dataType">string</property>
+                                                    </structure>
+                                                </list-property>
+                                                <property name="resultSetColumn">DEL_METHOD</property>
+                                            </data>
+                                        </cell>
+                                    </row>
+                                </grid>
+                            </cell>
+                            <cell id="81">
+                                <property name="borderLeftStyle">solid</property>
+                                <property name="borderLeftWidth">medium</property>
+                                <property name="borderRightStyle">solid</property>
+                                <property name="borderRightWidth">medium</property>
+                                <grid id="208">
+                                    <column id="209">
+                                        <property name="width">80px</property>
+                                    </column>
+                                    <column id="210"/>
+                                    <row id="211">
+                                        <cell id="212">
+                                            <label id="214">
+                                                <property name="fontFamily">sans-serif</property>
+                                                <property name="fontSize">7pt</property>
+                                                <property name="fontWeight">bold</property>
+                                                <property name="paddingTop">0pt</property>
+                                                <property name="paddingLeft">0pt</property>
+                                                <property name="paddingBottom">0pt</property>
+                                                <property name="paddingRight">0pt</property>
+                                                <property name="textAlign">right</property>
+                                                <property name="width">75px</property>
+                                                <text-property name="text">Your Ref:</text-property>
+                                            </label>
+                                        </cell>
+                                        <cell id="213">
+                                            <data id="283">
+                                                <property name="fontFamily">sans-serif</property>
+                                                <property name="fontSize">7pt</property>
+                                                <property name="dataSet">DataSet01</property>
+                                                <list-property name="boundDataColumns">
+                                                    <structure>
+                                                        <property name="name">YOUR_REF</property>
+                                                        <text-property name="displayName">YOUR_REF</text-property>
+                                                        <expression name="expression" type="javascript">dataSetRow["YOUR_REF"]</expression>
+                                                        <property name="dataType">string</property>
+                                                    </structure>
+                                                </list-property>
+                                                <property name="resultSetColumn">YOUR_REF</property>
+                                            </data>
+                                        </cell>
+                                    </row>
+                                </grid>
+                            </cell>
+                            <cell id="82"/>
+                        </row>
+                        <row id="83">
+                            <cell id="84">
+                                <property name="borderRightStyle">solid</property>
+                                <property name="borderRightWidth">medium</property>
+                            </cell>
+                            <cell id="85">
+                                <property name="borderLeftStyle">solid</property>
+                                <property name="borderLeftWidth">medium</property>
+                                <property name="borderRightStyle">solid</property>
+                                <property name="borderRightWidth">medium</property>
+                                <grid id="170">
+                                    <column id="171">
+                                        <property name="width">25px</property>
+                                    </column>
+                                    <column id="172"/>
+                                    <row id="173">
+                                        <cell id="174">
+                                            <label id="176">
+                                                <property name="fontFamily">sans-serif</property>
+                                                <property name="fontSize">7pt</property>
+                                                <property name="fontWeight">bold</property>
+                                                <property name="width">58px</property>
+                                                <text-property name="text">By:</text-property>
+                                            </label>
+                                        </cell>
+                                        <cell id="175">
+                                            <data id="278">
+                                                <property name="fontFamily">sans-serif</property>
+                                                <property name="fontSize">7pt</property>
+                                                <property name="dataSet">DataSet01</property>
+                                                <list-property name="boundDataColumns">
+                                                    <structure>
+                                                        <property name="name">DEL_BY</property>
+                                                        <text-property name="displayName">DEL_BY</text-property>
+                                                        <expression name="expression" type="javascript">dataSetRow["DEL_BY"]</expression>
+                                                        <property name="dataType">string</property>
+                                                    </structure>
+                                                </list-property>
+                                                <property name="resultSetColumn">DEL_BY</property>
+                                            </data>
+                                        </cell>
+                                    </row>
+                                </grid>
+                            </cell>
+                            <cell id="86">
+                                <property name="borderLeftStyle">solid</property>
+                                <property name="borderLeftWidth">medium</property>
+                                <property name="borderRightStyle">solid</property>
+                                <property name="borderRightWidth">medium</property>
+                                <grid id="215">
+                                    <column id="216">
+                                        <property name="width">80px</property>
+                                    </column>
+                                    <column id="217"/>
+                                    <row id="218">
+                                        <cell id="219">
+                                            <label id="221">
+                                                <property name="fontFamily">sans-serif</property>
+                                                <property name="fontSize">7pt</property>
+                                                <property name="fontWeight">bold</property>
+                                                <property name="paddingTop">0pt</property>
+                                                <property name="paddingLeft">0pt</property>
+                                                <property name="paddingBottom">0pt</property>
+                                                <property name="paddingRight">0pt</property>
+                                                <property name="textAlign">right</property>
+                                                <property name="width">75px</property>
+                                                <text-property name="text">Misc Ref:</text-property>
+                                            </label>
+                                        </cell>
+                                        <cell id="220">
+                                            <data id="284">
+                                                <property name="fontFamily">sans-serif</property>
+                                                <property name="fontSize">7pt</property>
+                                                <property name="dataSet">DataSet01</property>
+                                                <list-property name="boundDataColumns">
+                                                    <structure>
+                                                        <property name="name">MISC_REF</property>
+                                                        <text-property name="displayName">MISC_REF</text-property>
+                                                        <expression name="expression" type="javascript">dataSetRow["MISC_REF"]</expression>
+                                                        <property name="dataType">string</property>
+                                                    </structure>
+                                                </list-property>
+                                                <property name="resultSetColumn">MISC_REF</property>
+                                            </data>
+                                        </cell>
+                                    </row>
+                                </grid>
+                            </cell>
+                            <cell id="87"/>
+                        </row>
+                        <row id="88">
+                            <cell id="89">
+                                <property name="borderRightStyle">solid</property>
+                                <property name="borderRightWidth">medium</property>
+                            </cell>
+                            <cell id="90">
+                                <property name="borderLeftStyle">solid</property>
+                                <property name="borderLeftWidth">medium</property>
+                                <property name="borderRightStyle">solid</property>
+                                <property name="borderRightWidth">medium</property>
+                            </cell>
+                            <cell id="91">
+                                <property name="borderLeftStyle">solid</property>
+                                <property name="borderLeftWidth">medium</property>
+                                <property name="borderRightStyle">solid</property>
+                                <property name="borderRightWidth">medium</property>
+                                <grid id="222">
+                                    <column id="223">
+                                        <property name="width">80px</property>
+                                    </column>
+                                    <column id="224"/>
+                                    <column id="225"/>
+                                    <column id="226"/>
+                                    <row id="227">
+                                        <cell id="228">
+                                            <label id="232">
+                                                <property name="fontFamily">sans-serif</property>
+                                                <property name="fontSize">7pt</property>
+                                                <property name="fontWeight">bold</property>
+                                                <property name="paddingTop">0pt</property>
+                                                <property name="paddingLeft">0pt</property>
+                                                <property name="paddingBottom">0pt</property>
+                                                <property name="paddingRight">0pt</property>
+                                                <property name="textAlign">right</property>
+                                                <property name="width">75px</property>
+                                                <text-property name="text">Cheque No:</text-property>
+                                            </label>
+                                        </cell>
+                                        <cell id="229">
+                                            <data id="285">
+                                                <property name="fontFamily">sans-serif</property>
+                                                <property name="fontSize">7pt</property>
+                                                <property name="dataSet">DataSet01</property>
+                                                <list-property name="boundDataColumns">
+                                                    <structure>
+                                                        <property name="name">CHEQUE_NO</property>
+                                                        <text-property name="displayName">CHEQUE_NO</text-property>
+                                                        <expression name="expression" type="javascript">dataSetRow["CHEQUE_NO"]</expression>
+                                                        <property name="dataType">string</property>
+                                                    </structure>
+                                                </list-property>
+                                                <property name="resultSetColumn">CHEQUE_NO</property>
+                                            </data>
+                                        </cell>
+                                        <cell id="230">
+                                            <label id="233">
+                                                <property name="fontFamily">sans-serif</property>
+                                                <property name="fontSize">7pt</property>
+                                                <property name="fontWeight">bold</property>
+                                                <property name="paddingTop">0pt</property>
+                                                <property name="paddingLeft">0pt</property>
+                                                <property name="paddingBottom">0pt</property>
+                                                <property name="paddingRight">0pt</property>
+                                                <property name="textAlign">right</property>
+                                                <property name="width">60px</property>
+                                                <text-property name="text">Date:</text-property>
+                                            </label>
+                                        </cell>
+                                        <cell id="231">
+                                            <data id="286">
+                                                <property name="fontFamily">sans-serif</property>
+                                                <property name="fontSize">7pt</property>
+                                                <property name="dataSet">DataSet01</property>
+                                                <list-property name="boundDataColumns">
+                                                    <structure>
+                                                        <property name="name">DEL_DATE</property>
+                                                        <text-property name="displayName">DEL_DATE</text-property>
+                                                        <expression name="expression" type="javascript">dataSetRow["DEL_DATE"]</expression>
+                                                        <property name="dataType">string</property>
+                                                    </structure>
+                                                </list-property>
+                                                <property name="resultSetColumn">DEL_DATE</property>
+                                            </data>
+                                        </cell>
+                                    </row>
+                                </grid>
+                            </cell>
+                            <cell id="92"/>
+                        </row>
+                        <row id="93">
+                            <cell id="94">
+                                <property name="borderRightStyle">solid</property>
+                                <property name="borderRightWidth">medium</property>
+                            </cell>
+                            <cell id="95">
+                                <property name="borderLeftStyle">solid</property>
+                                <property name="borderLeftWidth">medium</property>
+                                <property name="borderRightStyle">solid</property>
+                                <property name="borderRightWidth">medium</property>
+                            </cell>
+                            <cell id="96">
+                                <property name="borderLeftStyle">solid</property>
+                                <property name="borderLeftWidth">medium</property>
+                                <property name="borderRightStyle">solid</property>
+                                <property name="borderRightWidth">medium</property>
+                                <grid id="234">
+                                    <column id="235">
+                                        <property name="width">80px</property>
+                                    </column>
+                                    <column id="236"/>
+                                    <row id="237">
+                                        <cell id="238">
+                                            <label id="240">
+                                                <property name="fontFamily">sans-serif</property>
+                                                <property name="fontSize">7pt</property>
+                                                <property name="fontWeight">bold</property>
+                                                <property name="paddingTop">0pt</property>
+                                                <property name="paddingLeft">0pt</property>
+                                                <property name="paddingBottom">0pt</property>
+                                                <property name="paddingRight">0pt</property>
+                                                <property name="textAlign">right</property>
+                                                <property name="width">75px</property>
+                                                <text-property name="text">Drawn On:</text-property>
+                                            </label>
+                                        </cell>
+                                        <cell id="239">
+                                            <data id="287">
+                                                <property name="fontFamily">sans-serif</property>
+                                                <property name="fontSize">7pt</property>
+                                                <property name="dataSet">DataSet01</property>
+                                                <list-property name="boundDataColumns">
+                                                    <structure>
+                                                        <property name="name">DRAWN_ON</property>
+                                                        <text-property name="displayName">DRAWN_ON</text-property>
+                                                        <expression name="expression" type="javascript">dataSetRow["DRAWN_ON"]</expression>
+                                                        <property name="dataType">string</property>
+                                                    </structure>
+                                                </list-property>
+                                                <property name="resultSetColumn">DRAWN_ON</property>
+                                            </data>
+                                        </cell>
+                                    </row>
+                                </grid>
+                            </cell>
+                            <cell id="97"/>
+                        </row>
+                        <row id="98">
+                            <cell id="99">
+                                <property name="borderRightStyle">solid</property>
+                                <property name="borderRightWidth">medium</property>
+                            </cell>
+                            <cell id="100">
+                                <property name="borderLeftStyle">solid</property>
+                                <property name="borderLeftWidth">medium</property>
+                                <property name="borderRightStyle">solid</property>
+                                <property name="borderRightWidth">medium</property>
+                            </cell>
+                            <cell id="101">
+                                <property name="borderLeftStyle">solid</property>
+                                <property name="borderLeftWidth">medium</property>
+                                <property name="borderRightStyle">solid</property>
+                                <property name="borderRightWidth">medium</property>
+                            </cell>
+                            <cell id="102"/>
+                        </row>
+                        <row id="103">
+                            <cell id="104">
+                                <property name="borderRightStyle">solid</property>
+                                <property name="borderRightWidth">medium</property>
+                            </cell>
+                            <cell id="105">
+                                <property name="borderLeftStyle">solid</property>
+                                <property name="borderLeftWidth">medium</property>
+                                <property name="borderRightStyle">solid</property>
+                                <property name="borderRightWidth">medium</property>
+                                <grid id="187">
+                                    <column id="188">
+                                        <property name="width">30px</property>
+                                    </column>
+                                    <column id="189"/>
+                                    <row id="190">
+                                        <cell id="191">
+                                            <label id="199">
+                                                <property name="fontFamily">sans-serif</property>
+                                                <property name="fontSize">7pt</property>
+                                                <property name="fontWeight">bold</property>
+                                                <property name="width">58px</property>
+                                                <text-property name="text">To:</text-property>
+                                            </label>
+                                        </cell>
+                                        <cell id="192">
+                                            <data id="279">
+                                                <property name="fontFamily">sans-serif</property>
+                                                <property name="fontSize">7pt</property>
+                                                <property name="dataSet">DataSet01</property>
+                                                <list-property name="boundDataColumns">
+                                                    <structure>
+                                                        <property name="name">DEL_TO</property>
+                                                        <text-property name="displayName">DEL_TO</text-property>
+                                                        <expression name="expression" type="javascript">dataSetRow["DEL_TO"]</expression>
+                                                        <property name="dataType">string</property>
+                                                    </structure>
+                                                </list-property>
+                                                <property name="resultSetColumn">DEL_TO</property>
+                                            </data>
+                                        </cell>
+                                    </row>
+                                </grid>
+                            </cell>
+                            <cell id="106">
+                                <property name="borderLeftStyle">solid</property>
+                                <property name="borderLeftWidth">medium</property>
+                                <property name="borderRightStyle">solid</property>
+                                <property name="borderRightWidth">medium</property>
+                                <grid id="247">
+                                    <column id="248">
+                                        <property name="width">80px</property>
+                                    </column>
+                                    <column id="249"/>
+                                    <row id="250">
+                                        <cell id="251">
+                                            <label id="253">
+                                                <property name="fontFamily">sans-serif</property>
+                                                <property name="fontSize">7pt</property>
+                                                <property name="fontWeight">bold</property>
+                                                <property name="paddingTop">0pt</property>
+                                                <property name="paddingLeft">0pt</property>
+                                                <property name="paddingBottom">0pt</property>
+                                                <property name="paddingRight">0pt</property>
+                                                <property name="textAlign">right</property>
+                                                <property name="width">75px</property>
+                                                <text-property name="text">Payable At:</text-property>
+                                            </label>
+                                        </cell>
+                                        <cell id="252">
+                                            <data id="288">
+                                                <property name="fontFamily">sans-serif</property>
+                                                <property name="fontSize">7pt</property>
+                                                <property name="dataSet">DataSet01</property>
+                                                <list-property name="boundDataColumns">
+                                                    <structure>
+                                                        <property name="name">PAYABLE_AT</property>
+                                                        <text-property name="displayName">PAYABLE_AT</text-property>
+                                                        <expression name="expression" type="javascript">dataSetRow["PAYABLE_AT"]</expression>
+                                                        <property name="dataType">string</property>
+                                                    </structure>
+                                                </list-property>
+                                                <property name="resultSetColumn">PAYABLE_AT</property>
+                                            </data>
+                                        </cell>
+                                    </row>
+                                </grid>
+                            </cell>
+                            <cell id="107"/>
+                        </row>
+                        <row id="108">
+                            <property name="height">0.23958333333333334in</property>
+                            <cell id="109">
+                                <property name="borderRightStyle">solid</property>
+                                <property name="borderRightWidth">medium</property>
+                            </cell>
+                            <cell id="110">
+                                <property name="borderLeftStyle">solid</property>
+                                <property name="borderLeftWidth">medium</property>
+                                <property name="borderRightStyle">solid</property>
+                                <property name="borderRightWidth">medium</property>
+                            </cell>
+                            <cell id="111">
+                                <property name="borderLeftStyle">solid</property>
+                                <property name="borderLeftWidth">medium</property>
+                                <property name="borderRightStyle">solid</property>
+                                <property name="borderRightWidth">medium</property>
+                                <grid id="254">
+                                    <column id="255">
+                                        <property name="width">80px</property>
+                                    </column>
+                                    <column id="256"/>
+                                    <row id="257">
+                                        <cell id="258">
+                                            <label id="260">
+                                                <property name="fontFamily">sans-serif</property>
+                                                <property name="fontSize">7pt</property>
+                                                <property name="fontWeight">bold</property>
+                                                <property name="paddingTop">0pt</property>
+                                                <property name="paddingLeft">0pt</property>
+                                                <property name="paddingBottom">0pt</property>
+                                                <property name="paddingRight">0pt</property>
+                                                <property name="textAlign">right</property>
+                                                <property name="width">75px</property>
+                                                <text-property name="text">Amount:</text-property>
+                                            </label>
+                                        </cell>
+                                        <cell id="259">
+                                            <data id="289">
+                                                <property name="fontFamily">sans-serif</property>
+                                                <property name="fontSize">7pt</property>
+                                                <property name="dataSet">DataSet01</property>
+                                                <list-property name="boundDataColumns">
+                                                    <structure>
+                                                        <property name="name">AMT</property>
+                                                        <text-property name="displayName">AMT</text-property>
+                                                        <expression name="expression" type="javascript">dataSetRow["AMT"]</expression>
+                                                        <property name="dataType">float</property>
+                                                    </structure>
+                                                </list-property>
+                                                <property name="resultSetColumn">AMT</property>
+                                            </data>
+                                        </cell>
+                                    </row>
+                                </grid>
+                            </cell>
+                            <cell id="112"/>
+                        </row>
+                        <row id="113">
+                            <property name="height">0.25in</property>
+                            <cell id="114">
+                                <property name="borderRightStyle">solid</property>
+                                <property name="borderRightWidth">medium</property>
+                            </cell>
+                            <cell id="115">
+                                <property name="borderLeftStyle">solid</property>
+                                <property name="borderLeftWidth">medium</property>
+                                <property name="borderRightStyle">solid</property>
+                                <property name="borderRightWidth">medium</property>
+                            </cell>
+                            <cell id="116">
+                                <property name="borderLeftStyle">solid</property>
+                                <property name="borderLeftWidth">medium</property>
+                                <property name="borderRightStyle">solid</property>
+                                <property name="borderRightWidth">medium</property>
+                                <grid id="261">
+                                    <column id="262">
+                                        <property name="width">80px</property>
+                                    </column>
+                                    <column id="263"/>
+                                    <row id="264">
+                                        <cell id="265">
+                                            <label id="267">
+                                                <property name="fontFamily">sans-serif</property>
+                                                <property name="fontSize">7pt</property>
+                                                <property name="fontWeight">bold</property>
+                                                <property name="paddingTop">0pt</property>
+                                                <property name="paddingLeft">0pt</property>
+                                                <property name="paddingBottom">0pt</property>
+                                                <property name="paddingRight">0pt</property>
+                                                <property name="textAlign">right</property>
+                                                <property name="width">75px</property>
+                                                <text-property name="text">Customer:</text-property>
+                                            </label>
+                                        </cell>
+                                        <cell id="266">
+                                            <data id="290">
+                                                <property name="fontFamily">sans-serif</property>
+                                                <property name="fontSize">7pt</property>
+                                                <property name="dataSet">DataSet01</property>
+                                                <list-property name="boundDataColumns">
+                                                    <structure>
+                                                        <property name="name">CUSTOMER_DET</property>
+                                                        <text-property name="displayName">CUSTOMER_DET</text-property>
+                                                        <expression name="expression" type="javascript">dataSetRow["CUSTOMER_DET"]</expression>
+                                                        <property name="dataType">string</property>
+                                                    </structure>
+                                                </list-property>
+                                                <property name="resultSetColumn">CUSTOMER_DET</property>
+                                            </data>
+                                        </cell>
+                                    </row>
+                                </grid>
+                            </cell>
+                            <cell id="117"/>
+                        </row>
+                        <row id="118">
+                            <cell id="119">
+                                <property name="borderRightStyle">solid</property>
+                                <property name="borderRightWidth">medium</property>
+                            </cell>
+                            <cell id="120">
+                                <property name="borderLeftStyle">solid</property>
+                                <property name="borderLeftWidth">medium</property>
+                                <property name="borderRightStyle">solid</property>
+                                <property name="borderRightWidth">medium</property>
+                                <grid id="193">
+                                    <column id="194">
+                                        <property name="width">60px</property>
+                                    </column>
+                                    <column id="195"/>
+                                    <row id="196">
+                                        <cell id="197">
+                                            <label id="200">
+                                                <property name="fontFamily">sans-serif</property>
+                                                <property name="fontSize">7pt</property>
+                                                <property name="fontWeight">bold</property>
+                                                <property name="width">58px</property>
+                                                <text-property name="text">Address:</text-property>
+                                            </label>
+                                        </cell>
+                                        <cell id="198">
+                                            <data id="280">
+                                                <property name="fontFamily">sans-serif</property>
+                                                <property name="fontSize">7pt</property>
+                                                <property name="dataSet">DataSet01</property>
+                                                <list-property name="boundDataColumns">
+                                                    <structure>
+                                                        <property name="name">DEL_ADDRESS</property>
+                                                        <text-property name="displayName">DEL_ADDRESS</text-property>
+                                                        <expression name="expression" type="javascript">dataSetRow["DEL_ADDRESS"]</expression>
+                                                        <property name="dataType">string</property>
+                                                    </structure>
+                                                </list-property>
+                                                <property name="resultSetColumn">DEL_ADDRESS</property>
+                                            </data>
+                                        </cell>
+                                    </row>
+                                </grid>
+                            </cell>
+                            <cell id="121">
+                                <property name="borderLeftStyle">solid</property>
+                                <property name="borderLeftWidth">medium</property>
+                                <property name="borderRightStyle">solid</property>
+                                <property name="borderRightWidth">medium</property>
+                                <grid id="268">
+                                    <column id="269">
+                                        <property name="width">80px</property>
+                                    </column>
+                                    <column id="270"/>
+                                    <row id="271">
+                                        <cell id="272">
+                                            <label id="274">
+                                                <property name="fontFamily">sans-serif</property>
+                                                <property name="fontSize">7pt</property>
+                                                <property name="fontWeight">bold</property>
+                                                <property name="paddingTop">0pt</property>
+                                                <property name="paddingLeft">0pt</property>
+                                                <property name="paddingBottom">0pt</property>
+                                                <property name="paddingRight">0pt</property>
+                                                <property name="textAlign">right</property>
+                                                <property name="width">75px</property>
+                                                <text-property name="text">Bank Ref:</text-property>
+                                            </label>
+                                        </cell>
+                                        <cell id="273">
+                                            <data id="291">
+                                                <property name="fontFamily">sans-serif</property>
+                                                <property name="fontSize">7pt</property>
+                                                <property name="dataSet">DataSet01</property>
+                                                <list-property name="boundDataColumns">
+                                                    <structure>
+                                                        <property name="name">BANK_REF</property>
+                                                        <text-property name="displayName">BANK_REF</text-property>
+                                                        <expression name="expression" type="javascript">dataSetRow["BANK_REF"]</expression>
+                                                        <property name="dataType">string</property>
+                                                    </structure>
+                                                </list-property>
+                                                <property name="resultSetColumn">BANK_REF</property>
+                                            </data>
+                                        </cell>
+                                    </row>
+                                </grid>
+                            </cell>
+                            <cell id="122"/>
+                        </row>
+                        <row id="123">
+                            <cell id="124">
+                                <property name="borderRightStyle">solid</property>
+                                <property name="borderRightWidth">medium</property>
+                            </cell>
+                            <cell id="125">
+                                <property name="borderLeftStyle">solid</property>
+                                <property name="borderLeftWidth">medium</property>
+                                <property name="borderRightStyle">solid</property>
+                                <property name="borderRightWidth">medium</property>
+                            </cell>
+                            <cell id="126">
+                                <property name="borderLeftStyle">solid</property>
+                                <property name="borderLeftWidth">medium</property>
+                                <property name="borderRightStyle">solid</property>
+                                <property name="borderRightWidth">medium</property>
+                            </cell>
+                            <cell id="127"/>
+                        </row>
+                        <row id="128">
+                            <cell id="129">
+                                <property name="borderRightStyle">solid</property>
+                                <property name="borderRightWidth">medium</property>
+                            </cell>
+                            <cell id="130">
+                                <property name="borderLeftStyle">solid</property>
+                                <property name="borderLeftWidth">medium</property>
+                                <property name="borderRightStyle">solid</property>
+                                <property name="borderRightWidth">medium</property>
+                            </cell>
+                            <cell id="131">
+                                <property name="borderLeftStyle">solid</property>
+                                <property name="borderLeftWidth">medium</property>
+                                <property name="borderRightStyle">solid</property>
+                                <property name="borderRightWidth">medium</property>
+                            </cell>
+                            <cell id="132"/>
+                        </row>
+                        <row id="133">
+                            <cell id="134">
+                                <property name="borderRightStyle">solid</property>
+                                <property name="borderRightWidth">medium</property>
+                            </cell>
+                            <cell id="135">
+                                <property name="borderBottomStyle">solid</property>
+                                <property name="borderBottomWidth">medium</property>
+                                <property name="borderLeftStyle">solid</property>
+                                <property name="borderLeftWidth">medium</property>
+                                <property name="borderRightStyle">solid</property>
+                                <property name="borderRightWidth">medium</property>
+                                <grid id="179">
+                                    <column id="180">
+                                        <property name="width">40px</property>
+                                    </column>
+                                    <column id="181"/>
+                                    <row id="182">
+                                        <cell id="183">
+                                            <label id="185">
+                                                <property name="fontFamily">sans-serif</property>
+                                                <property name="fontSize">7pt</property>
+                                                <property name="fontWeight">bold</property>
+                                                <property name="width">58px</property>
+                                                <text-property name="text">Pin:</text-property>
+                                            </label>
+                                        </cell>
+                                        <cell id="184">
+                                            <data id="281">
+                                                <property name="fontFamily">sans-serif</property>
+                                                <property name="fontSize">7pt</property>
+                                                <property name="dataSet">DataSet01</property>
+                                                <list-property name="boundDataColumns">
+                                                    <structure>
+                                                        <property name="name">DEL_PIN</property>
+                                                        <text-property name="displayName">DEL_PIN</text-property>
+                                                        <expression name="expression" type="javascript">dataSetRow["DEL_PIN"]</expression>
+                                                        <property name="dataType">string</property>
+                                                    </structure>
+                                                </list-property>
+                                                <property name="resultSetColumn">DEL_PIN</property>
+                                            </data>
+                                        </cell>
+                                    </row>
+                                </grid>
+                            </cell>
+                            <cell id="136">
+                                <property name="borderBottomStyle">solid</property>
+                                <property name="borderBottomWidth">medium</property>
+                                <property name="borderLeftStyle">solid</property>
+                                <property name="borderLeftWidth">medium</property>
+                                <property name="borderRightStyle">solid</property>
+                                <property name="borderRightWidth">medium</property>
+                            </cell>
+                            <cell id="137"/>
+                        </row>
+                        <row id="138">
+                            <cell id="139"/>
+                            <cell id="140"/>
+                            <cell id="141"/>
+                            <cell id="142"/>
+                        </row>
+                    </grid>
+                </cell>
+            </row>
+            <row id="14">
+                <property name="height">4.166666666666667in</property>
+                <cell id="15">
+                    <label id="312">
+                        <text-property name="text"> </text-property>
+                    </label>
+                    <label id="313">
+                        <property name="fontSize">19pt</property>
+                        <text-property name="text"> </text-property>
+                    </label>
+                    <grid id="337">
+                        <property name="width">8.0625in</property>
+                        <column id="338">
+                            <property name="width">568px</property>
+                        </column>
+                        <column id="339">
+                            <property name="width">4px</property>
+                        </column>
+                        <column id="340">
+                            <property name="width">4px</property>
+                        </column>
+                        <column id="341">
+                            <property name="width">4px</property>
+                        </column>
+                        <column id="342">
+                            <property name="width">4px</property>
+                        </column>
+                        <column id="343">
+                            <property name="width">4px</property>
+                        </column>
+                        <column id="344">
+                            <property name="width">4px</property>
+                        </column>
+                        <column id="345">
+                            <property name="width">4px</property>
+                        </column>
+                        <column id="346">
+                            <property name="width">4px</property>
+                        </column>
+                        <column id="347">
+                            <property name="width">60px</property>
+                        </column>
+                        <row id="348">
+                            <cell id="349">
+                                <label id="359">
+                                    <property name="width">575px</property>
+                                    <text-property name="text"> </text-property>
+                                </label>
+                            </cell>
+                            <cell id="350">
+                                <property name="width">5px</property>
+                                <data id="362">
+                                    <property name="fontFamily">sans-serif</property>
+                                    <property name="fontSize">8pt</property>
+                                    <property name="width">10px</property>
+                                    <property name="dataSet">DataSet01</property>
+                                    <list-property name="boundDataColumns">
+                                        <structure>
+                                            <property name="name">CHK_DATE</property>
+                                            <text-property name="displayName">CHK_DATE</text-property>
+                                            <expression name="expression" type="javascript">dataSetRow["CHK_DATE"].charAt(0)</expression>
+                                            <property name="dataType">string</property>
+                                            <property name="allowExport">true</property>
+                                        </structure>
+                                    </list-property>
+                                    <property name="resultSetColumn">CHK_DATE</property>
+                                </data>
+                            </cell>
+                            <cell id="351">
+                                <data id="363">
+                                    <property name="fontFamily">sans-serif</property>
+                                    <property name="fontSize">8pt</property>
+                                    <property name="width">10px</property>
+                                    <property name="dataSet">DataSet01</property>
+                                    <list-property name="boundDataColumns">
+                                        <structure>
+                                            <property name="name">CHK_DATE</property>
+                                            <text-property name="displayName">CHK_DATE</text-property>
+                                            <expression name="expression" type="javascript">dataSetRow["CHK_DATE"].charAt(1)</expression>
+                                            <property name="dataType">string</property>
+                                            <property name="allowExport">true</property>
+                                        </structure>
+                                    </list-property>
+                                    <property name="resultSetColumn">CHK_DATE</property>
+                                </data>
+                            </cell>
+                            <cell id="352">
+                                <data id="364">
+                                    <property name="fontFamily">sans-serif</property>
+                                    <property name="fontSize">8pt</property>
+                                    <property name="width">10px</property>
+                                    <property name="dataSet">DataSet01</property>
+                                    <list-property name="boundDataColumns">
+                                        <structure>
+                                            <property name="name">CHK_DATE</property>
+                                            <text-property name="displayName">CHK_DATE</text-property>
+                                            <expression name="expression" type="javascript">dataSetRow["CHK_DATE"].charAt(3)</expression>
+                                            <property name="dataType">string</property>
+                                            <property name="allowExport">true</property>
+                                        </structure>
+                                    </list-property>
+                                    <property name="resultSetColumn">CHK_DATE</property>
+                                </data>
+                            </cell>
+                            <cell id="353">
+                                <data id="365">
+                                    <property name="fontFamily">sans-serif</property>
+                                    <property name="fontSize">8pt</property>
+                                    <property name="width">10px</property>
+                                    <property name="dataSet">DataSet01</property>
+                                    <list-property name="boundDataColumns">
+                                        <structure>
+                                            <property name="name">CHK_DATE</property>
+                                            <text-property name="displayName">CHK_DATE</text-property>
+                                            <expression name="expression" type="javascript">dataSetRow["CHK_DATE"].charAt(4)</expression>
+                                            <property name="dataType">string</property>
+                                            <property name="allowExport">true</property>
+                                        </structure>
+                                    </list-property>
+                                    <property name="resultSetColumn">CHK_DATE</property>
+                                </data>
+                            </cell>
+                            <cell id="354">
+                                <data id="366">
+                                    <property name="fontFamily">sans-serif</property>
+                                    <property name="fontSize">8pt</property>
+                                    <property name="width">10px</property>
+                                    <property name="dataSet">DataSet01</property>
+                                    <list-property name="boundDataColumns">
+                                        <structure>
+                                            <property name="name">CHK_DATE</property>
+                                            <text-property name="displayName">CHK_DATE</text-property>
+                                            <expression name="expression" type="javascript">dataSetRow["CHK_DATE"].charAt(6)</expression>
+                                            <property name="dataType">string</property>
+                                            <property name="allowExport">true</property>
+                                        </structure>
+                                    </list-property>
+                                    <property name="resultSetColumn">CHK_DATE</property>
+                                </data>
+                            </cell>
+                            <cell id="355">
+                                <data id="367">
+                                    <property name="fontFamily">sans-serif</property>
+                                    <property name="fontSize">8pt</property>
+                                    <property name="width">10px</property>
+                                    <property name="dataSet">DataSet01</property>
+                                    <list-property name="boundDataColumns">
+                                        <structure>
+                                            <property name="name">CHK_DATE</property>
+                                            <text-property name="displayName">CHK_DATE</text-property>
+                                            <expression name="expression" type="javascript">dataSetRow["CHK_DATE"].charAt(7)</expression>
+                                            <property name="dataType">string</property>
+                                            <property name="allowExport">true</property>
+                                        </structure>
+                                    </list-property>
+                                    <property name="resultSetColumn">CHK_DATE</property>
+                                </data>
+                            </cell>
+                            <cell id="356">
+                                <data id="368">
+                                    <property name="fontFamily">sans-serif</property>
+                                    <property name="fontSize">8pt</property>
+                                    <property name="width">10px</property>
+                                    <property name="dataSet">DataSet01</property>
+                                    <list-property name="boundDataColumns">
+                                        <structure>
+                                            <property name="name">CHK_DATE</property>
+                                            <text-property name="displayName">CHK_DATE</text-property>
+                                            <expression name="expression" type="javascript">dataSetRow["CHK_DATE"].charAt(8)</expression>
+                                            <property name="dataType">string</property>
+                                            <property name="allowExport">true</property>
+                                        </structure>
+                                    </list-property>
+                                    <property name="resultSetColumn">CHK_DATE</property>
+                                </data>
+                            </cell>
+                            <cell id="357">
+                                <data id="369">
+                                    <property name="fontFamily">sans-serif</property>
+                                    <property name="fontSize">8pt</property>
+                                    <property name="width">10px</property>
+                                    <property name="dataSet">DataSet01</property>
+                                    <list-property name="boundDataColumns">
+                                        <structure>
+                                            <property name="name">CHK_DATE</property>
+                                            <text-property name="displayName">CHK_DATE</text-property>
+                                            <expression name="expression" type="javascript">dataSetRow["CHK_DATE"].charAt(9)</expression>
+                                            <property name="dataType">string</property>
+                                            <property name="allowExport">true</property>
+                                        </structure>
+                                    </list-property>
+                                    <property name="resultSetColumn">CHK_DATE</property>
+                                </data>
+                            </cell>
+                            <cell id="358"/>
+                        </row>
+                    </grid>
+                    <label id="370">
+                        <text-property name="text"> </text-property>
+                    </label>
+                    <grid id="372">
+                        <column id="373">
+                            <property name="width">75px</property>
+                        </column>
+                        <column id="374"/>
+                        <row id="375">
+                            <cell id="376"/>
+                            <cell id="377">
+                                <data id="378">
+                                    <property name="fontFamily">sans-serif</property>
+                                    <property name="fontSize">9pt</property>
+                                    <property name="dataSet">DataSet01</property>
+                                    <list-property name="boundDataColumns">
+                                        <structure>
+                                            <property name="name">PAY_TO</property>
+                                            <text-property name="displayName">PAY_TO</text-property>
+                                            <expression name="expression" type="javascript">"***" + dataSetRow["PAY_TO"].trim() + "***"</expression>
+                                            <property name="dataType">string</property>
+                                            <property name="allowExport">true</property>
+                                        </structure>
+                                    </list-property>
+                                    <property name="resultSetColumn">PAY_TO</property>
+                                </data>
+                            </cell>
+                        </row>
+                    </grid>
+                    <grid id="380">
+                        <column id="381">
+                            <property name="width">75px</property>
+                        </column>
+                        <column id="382">
+                            <property name="width">500px</property>
+                        </column>
+                        <column id="383">
+                            <property name="textAlign">center</property>
+                        </column>
+                        <row id="384">
+                            <property name="height">61px</property>
+                            <cell id="385"/>
+                            <cell id="386">
+                                <data id="388">
+                                    <property name="dataSet">DataSet01</property>
+                                    <list-property name="boundDataColumns">
+                                        <structure>
+                                            <property name="name">AMT_WORDS</property>
+                                            <text-property name="displayName">AMT_WORDS</text-property>
+                                            <expression name="expression" type="javascript">"***" + dataSetRow["AMT_WORDS"].trim() + "***"</expression>
+                                            <property name="dataType">string</property>
+                                            <property name="allowExport">true</property>
+                                        </structure>
+                                    </list-property>
+                                    <property name="resultSetColumn">AMT_WORDS</property>
+                                </data>
+                            </cell>
+                            <cell id="387">
+                                <data id="389">
+                                    <property name="marginTop">25px</property>
+                                    <property name="dataSet">DataSet01</property>
+                                    <list-property name="boundDataColumns">
+                                        <structure>
+                                            <property name="name">AMT_NUMBER</property>
+                                            <text-property name="displayName">AMT_NUMBER</text-property>
+                                            <expression name="expression" type="javascript">"***" + dataSetRow["AMT_NUMBER"].trim() + "***"</expression>
+                                            <property name="dataType">string</property>
+                                            <property name="allowExport">true</property>
+                                        </structure>
+                                    </list-property>
+                                    <property name="resultSetColumn">AMT_NUMBER</property>
+                                </data>
+                            </cell>
+                        </row>
+                    </grid>
+                    <grid id="390">
+                        <column id="391">
+                            <property name="width">88px</property>
+                        </column>
+                        <column id="392">
+                            <property name="width">287px</property>
+                        </column>
+                        <column id="393"/>
+                        <row id="394">
+                            <property name="height">35px</property>
+                            <cell id="395"/>
+                            <cell id="396">
+                                <data id="398">
+                                    <property name="fontFamily">sans-serif</property>
+                                    <property name="fontSize">9pt</property>
+                                    <property name="dataSet">DataSet01</property>
+                                    <list-property name="boundDataColumns">
+                                        <structure>
+                                            <property name="name">AC_NO</property>
+                                            <text-property name="displayName">AC_NO</text-property>
+                                            <expression name="expression" type="javascript">dataSetRow["BD_CODE"]</expression>
+                                            <property name="dataType">string</property>
+                                            <property name="allowExport">true</property>
+                                        </structure>
+                                    </list-property>
+                                    <property name="resultSetColumn">AC_NO</property>
+                                </data>
+                            </cell>
+                            <cell id="397">
+                                <data id="400">
+                                    <property name="fontFamily">sans-serif</property>
+                                    <property name="fontSize">8pt</property>
+                                    <property name="dataSet">DataSet01</property>
+                                    <list-property name="boundDataColumns">
+                                        <structure>
+                                            <property name="name">BANK_REF</property>
+                                            <text-property name="displayName">BANK_REF</text-property>
+                                            <expression name="expression" type="javascript">dataSetRow["BANK_REF"]</expression>
+                                            <property name="dataType">string</property>
+                                        </structure>
+                                    </list-property>
+                                    <property name="resultSetColumn">BANK_REF</property>
+                                </data>
+                            </cell>
+                        </row>
+                    </grid>
+                    <grid id="401">
+                        <column id="402">
+                            <property name="width">480px</property>
+                        </column>
+                        <column id="403">
+                            <property name="width">140px</property>
+                        </column>
+                        <column id="404">
+                            <property name="width">150px</property>
+                        </column>
+                        <row id="405">
+                            <property name="height">46px</property>
+                            <cell id="406">
+                                <property name="paddingTop">0pt</property>
+                                <property name="paddingLeft">0pt</property>
+                                <property name="paddingBottom">0pt</property>
+                                <property name="paddingRight">0pt</property>
+                            </cell>
+                            <cell id="407">
+                                <image id="424">
+                                    <property name="dataSet">DataSet01</property>
+                                    <list-property name="boundDataColumns">
+                                        <structure>
+                                            <property name="name">TID</property>
+                                            <expression name="expression" type="javascript">dataSetRow["TID"]</expression>
+                                            <property name="dataType">string</property>
+                                        </structure>
+                                        <structure>
+                                            <property name="name">DEL_AT</property>
+                                            <expression name="expression" type="javascript">dataSetRow["DEL_AT"]</expression>
+                                            <property name="dataType">string</property>
+                                        </structure>
+                                        <structure>
+                                            <property name="name">DEL_METHOD</property>
+                                            <expression name="expression" type="javascript">dataSetRow["DEL_METHOD"]</expression>
+                                            <property name="dataType">string</property>
+                                        </structure>
+                                        <structure>
+                                            <property name="name">DEL_BY</property>
+                                            <expression name="expression" type="javascript">dataSetRow["DEL_BY"]</expression>
+                                            <property name="dataType">string</property>
+                                        </structure>
+                                        <structure>
+                                            <property name="name">DEL_TO</property>
+                                            <expression name="expression" type="javascript">dataSetRow["DEL_TO"]</expression>
+                                            <property name="dataType">string</property>
+                                        </structure>
+                                        <structure>
+                                            <property name="name">DEL_ADDRESS</property>
+                                            <expression name="expression" type="javascript">dataSetRow["DEL_ADDRESS"]</expression>
+                                            <property name="dataType">string</property>
+                                        </structure>
+                                        <structure>
+                                            <property name="name">DEL_PIN</property>
+                                            <expression name="expression" type="javascript">dataSetRow["DEL_PIN"]</expression>
+                                            <property name="dataType">string</property>
+                                        </structure>
+                                        <structure>
+                                            <property name="name">OUR_REF</property>
+                                            <expression name="expression" type="javascript">dataSetRow["OUR_REF"]</expression>
+                                            <property name="dataType">string</property>
+                                        </structure>
+                                        <structure>
+                                            <property name="name">YOUR_REF</property>
+                                            <expression name="expression" type="javascript">dataSetRow["YOUR_REF"]</expression>
+                                            <property name="dataType">string</property>
+                                        </structure>
+                                        <structure>
+                                            <property name="name">MISC_REF</property>
+                                            <expression name="expression" type="javascript">dataSetRow["MISC_REF"]</expression>
+                                            <property name="dataType">string</property>
+                                        </structure>
+                                        <structure>
+                                            <property name="name">CHEQUE_NO</property>
+                                            <expression name="expression" type="javascript">dataSetRow["CHEQUE_NO"]</expression>
+                                            <property name="dataType">string</property>
+                                        </structure>
+                                        <structure>
+                                            <property name="name">DEL_DATE</property>
+                                            <expression name="expression" type="javascript">dataSetRow["DEL_DATE"]</expression>
+                                            <property name="dataType">string</property>
+                                        </structure>
+                                        <structure>
+                                            <property name="name">DRAWN_ON</property>
+                                            <expression name="expression" type="javascript">dataSetRow["DRAWN_ON"]</expression>
+                                            <property name="dataType">string</property>
+                                        </structure>
+                                        <structure>
+                                            <property name="name">PAYABLE_AT</property>
+                                            <expression name="expression" type="javascript">dataSetRow["PAYABLE_AT"]</expression>
+                                            <property name="dataType">string</property>
+                                        </structure>
+                                        <structure>
+                                            <property name="name">AMT</property>
+                                            <expression name="expression" type="javascript">dataSetRow["AMT"]</expression>
+                                            <property name="dataType">float</property>
+                                        </structure>
+                                        <structure>
+                                            <property name="name">CUSTOMER_DET</property>
+                                            <expression name="expression" type="javascript">dataSetRow["CUSTOMER_DET"]</expression>
+                                            <property name="dataType">string</property>
+                                        </structure>
+                                        <structure>
+                                            <property name="name">BANK_REF</property>
+                                            <expression name="expression" type="javascript">dataSetRow["BANK_REF"]</expression>
+                                            <property name="dataType">string</property>
+                                        </structure>
+                                        <structure>
+                                            <property name="name">CHK_DATE</property>
+                                            <expression name="expression" type="javascript">dataSetRow["CHK_DATE"]</expression>
+                                            <property name="dataType">string</property>
+                                        </structure>
+                                        <structure>
+                                            <property name="name">PAY_TO</property>
+                                            <expression name="expression" type="javascript">dataSetRow["PAY_TO"]</expression>
+                                            <property name="dataType">string</property>
+                                        </structure>
+                                        <structure>
+                                            <property name="name">AMT_WORDS</property>
+                                            <expression name="expression" type="javascript">dataSetRow["AMT_WORDS"]</expression>
+                                            <property name="dataType">string</property>
+                                        </structure>
+                                        <structure>
+                                            <property name="name">AMT_NUMBER</property>
+                                            <expression name="expression" type="javascript">dataSetRow["AMT_NUMBER"]</expression>
+                                            <property name="dataType">string</property>
+                                        </structure>
+                                        <structure>
+                                            <property name="name">AC_NO</property>
+                                            <expression name="expression" type="javascript">dataSetRow["AC_NO"]</expression>
+                                            <property name="dataType">string</property>
+                                        </structure>
+                                        <structure>
+                                            <property name="name">BD_CODE</property>
+                                            <expression name="expression" type="javascript">dataSetRow["BD_CODE"]</expression>
+                                            <property name="dataType">string</property>
+                                        </structure>
+                                        <structure>
+                                            <property name="name">AUTH_SIGN1</property>
+                                            <expression name="expression" type="javascript">dataSetRow["AUTH_SIGN1"]</expression>
+                                            <property name="dataType">string</property>
+                                        </structure>
+                                        <structure>
+                                            <property name="name">AUTH_SIGN2</property>
+                                            <expression name="expression" type="javascript">dataSetRow["AUTH_SIGN2"]</expression>
+                                            <property name="dataType">string</property>
+                                        </structure>
+                                        <structure>
+                                            <property name="name">MICR_LINE</property>
+                                            <expression name="expression" type="javascript">dataSetRow["MICR_LINE"]</expression>
+                                            <property name="dataType">string</property>
+                                        </structure>
+                                        <structure>
+                                            <property name="name">A_SIGN_IC1</property>
+                                            <expression name="expression" type="javascript">dataSetRow["A_SIGN_IC1"]</expression>
+                                            <property name="dataType">blob</property>
+                                        </structure>
+                                        <structure>
+                                            <property name="name">A_SIGN_IC2</property>
+                                            <expression name="expression" type="javascript">dataSetRow["A_SIGN_IC2"]</expression>
+                                            <property name="dataType">blob</property>
+                                        </structure>
+                                        <structure>
+                                            <property name="name">C_LOGO1</property>
+                                            <expression name="expression" type="javascript">dataSetRow["C_LOGO1"]</expression>
+                                            <property name="dataType">blob</property>
+                                        </structure>
+                                        <structure>
+                                            <property name="name">C_LOGO2</property>
+                                            <expression name="expression" type="javascript">dataSetRow["C_LOGO2"]</expression>
+                                            <property name="dataType">blob</property>
+                                        </structure>
+                                    </list-property>
+                                    <property name="source">expr</property>
+                                    <expression name="valueExpr">row["A_SIGN_IC1"]</expression>
+                                </image>
+                            </cell>
+                            <cell id="408">
+                                <image id="425">
+                                    <property name="dataSet">DataSet01</property>
+                                    <list-property name="boundDataColumns">
+                                        <structure>
+                                            <property name="name">TID</property>
+                                            <expression name="expression" type="javascript">dataSetRow["TID"]</expression>
+                                            <property name="dataType">string</property>
+                                        </structure>
+                                        <structure>
+                                            <property name="name">DEL_AT</property>
+                                            <expression name="expression" type="javascript">dataSetRow["DEL_AT"]</expression>
+                                            <property name="dataType">string</property>
+                                        </structure>
+                                        <structure>
+                                            <property name="name">DEL_METHOD</property>
+                                            <expression name="expression" type="javascript">dataSetRow["DEL_METHOD"]</expression>
+                                            <property name="dataType">string</property>
+                                        </structure>
+                                        <structure>
+                                            <property name="name">DEL_BY</property>
+                                            <expression name="expression" type="javascript">dataSetRow["DEL_BY"]</expression>
+                                            <property name="dataType">string</property>
+                                        </structure>
+                                        <structure>
+                                            <property name="name">DEL_TO</property>
+                                            <expression name="expression" type="javascript">dataSetRow["DEL_TO"]</expression>
+                                            <property name="dataType">string</property>
+                                        </structure>
+                                        <structure>
+                                            <property name="name">DEL_ADDRESS</property>
+                                            <expression name="expression" type="javascript">dataSetRow["DEL_ADDRESS"]</expression>
+                                            <property name="dataType">string</property>
+                                        </structure>
+                                        <structure>
+                                            <property name="name">DEL_PIN</property>
+                                            <expression name="expression" type="javascript">dataSetRow["DEL_PIN"]</expression>
+                                            <property name="dataType">string</property>
+                                        </structure>
+                                        <structure>
+                                            <property name="name">OUR_REF</property>
+                                            <expression name="expression" type="javascript">dataSetRow["OUR_REF"]</expression>
+                                            <property name="dataType">string</property>
+                                        </structure>
+                                        <structure>
+                                            <property name="name">YOUR_REF</property>
+                                            <expression name="expression" type="javascript">dataSetRow["YOUR_REF"]</expression>
+                                            <property name="dataType">string</property>
+                                        </structure>
+                                        <structure>
+                                            <property name="name">MISC_REF</property>
+                                            <expression name="expression" type="javascript">dataSetRow["MISC_REF"]</expression>
+                                            <property name="dataType">string</property>
+                                        </structure>
+                                        <structure>
+                                            <property name="name">CHEQUE_NO</property>
+                                            <expression name="expression" type="javascript">dataSetRow["CHEQUE_NO"]</expression>
+                                            <property name="dataType">string</property>
+                                        </structure>
+                                        <structure>
+                                            <property name="name">DEL_DATE</property>
+                                            <expression name="expression" type="javascript">dataSetRow["DEL_DATE"]</expression>
+                                            <property name="dataType">string</property>
+                                        </structure>
+                                        <structure>
+                                            <property name="name">DRAWN_ON</property>
+                                            <expression name="expression" type="javascript">dataSetRow["DRAWN_ON"]</expression>
+                                            <property name="dataType">string</property>
+                                        </structure>
+                                        <structure>
+                                            <property name="name">PAYABLE_AT</property>
+                                            <expression name="expression" type="javascript">dataSetRow["PAYABLE_AT"]</expression>
+                                            <property name="dataType">string</property>
+                                        </structure>
+                                        <structure>
+                                            <property name="name">AMT</property>
+                                            <expression name="expression" type="javascript">dataSetRow["AMT"]</expression>
+                                            <property name="dataType">float</property>
+                                        </structure>
+                                        <structure>
+                                            <property name="name">CUSTOMER_DET</property>
+                                            <expression name="expression" type="javascript">dataSetRow["CUSTOMER_DET"]</expression>
+                                            <property name="dataType">string</property>
+                                        </structure>
+                                        <structure>
+                                            <property name="name">BANK_REF</property>
+                                            <expression name="expression" type="javascript">dataSetRow["BANK_REF"]</expression>
+                                            <property name="dataType">string</property>
+                                        </structure>
+                                        <structure>
+                                            <property name="name">CHK_DATE</property>
+                                            <expression name="expression" type="javascript">dataSetRow["CHK_DATE"]</expression>
+                                            <property name="dataType">string</property>
+                                        </structure>
+                                        <structure>
+                                            <property name="name">PAY_TO</property>
+                                            <expression name="expression" type="javascript">dataSetRow["PAY_TO"]</expression>
+                                            <property name="dataType">string</property>
+                                        </structure>
+                                        <structure>
+                                            <property name="name">AMT_WORDS</property>
+                                            <expression name="expression" type="javascript">dataSetRow["AMT_WORDS"]</expression>
+                                            <property name="dataType">string</property>
+                                        </structure>
+                                        <structure>
+                                            <property name="name">AMT_NUMBER</property>
+                                            <expression name="expression" type="javascript">dataSetRow["AMT_NUMBER"]</expression>
+                                            <property name="dataType">string</property>
+                                        </structure>
+                                        <structure>
+                                            <property name="name">AC_NO</property>
+                                            <expression name="expression" type="javascript">dataSetRow["AC_NO"]</expression>
+                                            <property name="dataType">string</property>
+                                        </structure>
+                                        <structure>
+                                            <property name="name">BD_CODE</property>
+                                            <expression name="expression" type="javascript">dataSetRow["BD_CODE"]</expression>
+                                            <property name="dataType">string</property>
+                                        </structure>
+                                        <structure>
+                                            <property name="name">AUTH_SIGN1</property>
+                                            <expression name="expression" type="javascript">dataSetRow["AUTH_SIGN1"]</expression>
+                                            <property name="dataType">string</property>
+                                        </structure>
+                                        <structure>
+                                            <property name="name">AUTH_SIGN2</property>
+                                            <expression name="expression" type="javascript">dataSetRow["AUTH_SIGN2"]</expression>
+                                            <property name="dataType">string</property>
+                                        </structure>
+                                        <structure>
+                                            <property name="name">MICR_LINE</property>
+                                            <expression name="expression" type="javascript">dataSetRow["MICR_LINE"]</expression>
+                                            <property name="dataType">string</property>
+                                        </structure>
+                                        <structure>
+                                            <property name="name">A_SIGN_IC1</property>
+                                            <expression name="expression" type="javascript">dataSetRow["A_SIGN_IC1"]</expression>
+                                            <property name="dataType">blob</property>
+                                        </structure>
+                                        <structure>
+                                            <property name="name">A_SIGN_IC2</property>
+                                            <expression name="expression" type="javascript">dataSetRow["A_SIGN_IC2"]</expression>
+                                            <property name="dataType">blob</property>
+                                        </structure>
+                                        <structure>
+                                            <property name="name">C_LOGO1</property>
+                                            <expression name="expression" type="javascript">dataSetRow["C_LOGO1"]</expression>
+                                            <property name="dataType">blob</property>
+                                        </structure>
+                                        <structure>
+                                            <property name="name">C_LOGO2</property>
+                                            <expression name="expression" type="javascript">dataSetRow["C_LOGO2"]</expression>
+                                            <property name="dataType">blob</property>
+                                        </structure>
+                                    </list-property>
+                                    <property name="source">expr</property>
+                                    <expression name="valueExpr">row["A_SIGN_IC2"]</expression>
+                                </image>
+                            </cell>
+                        </row>
+                    </grid>
+                    <grid id="409">
+                        <column id="410"/>
+                        <column id="411">
+                            <property name="width">90px</property>
+                        </column>
+                        <column id="418">
+                            <property name="width">120px</property>
+                        </column>
+                        <column id="412">
+                            <property name="width">160px</property>
+                        </column>
+                        <row id="413">
+                            <property name="height">38px</property>
+                            <cell id="414">
+                                <property name="paddingTop">0pt</property>
+                                <property name="paddingLeft">0pt</property>
+                                <property name="paddingBottom">0pt</property>
+                                <property name="paddingRight">0pt</property>
+                            </cell>
+                            <cell id="415">
+                                <property name="paddingTop">0pt</property>
+                                <property name="paddingLeft">0pt</property>
+                                <property name="paddingBottom">0pt</property>
+                                <property name="paddingRight">0pt</property>
+                                <data id="423">
+                                    <property name="fontFamily">sans-serif</property>
+                                    <property name="fontSize">8pt</property>
+                                    <property name="marginTop">8px</property>
+                                    <property name="dataSet">DataSet01</property>
+                                    <list-property name="boundDataColumns">
+                                        <structure>
+                                            <property name="name">BD_CODE</property>
+                                            <text-property name="displayName">BD_CODE</text-property>
+                                            <expression name="expression" type="javascript">dataSetRow["AC_NO"]</expression>
+                                            <property name="dataType">string</property>
+                                            <property name="allowExport">true</property>
+                                        </structure>
+                                    </list-property>
+                                    <property name="resultSetColumn">BD_CODE</property>
+                                </data>
+                            </cell>
+                            <cell id="417">
+                                <property name="paddingTop">0pt</property>
+                                <property name="paddingLeft">0pt</property>
+                                <property name="paddingBottom">0pt</property>
+                                <property name="paddingRight">0pt</property>
+                                <data id="419">
+                                    <property name="fontFamily">sans-serif</property>
+                                    <property name="fontSize">8pt</property>
+                                    <property name="paddingTop">0pt</property>
+                                    <property name="paddingLeft">0pt</property>
+                                    <property name="paddingBottom">0pt</property>
+                                    <property name="paddingRight">0pt</property>
+                                    <property name="dataSet">DataSet01</property>
+                                    <list-property name="boundDataColumns">
+                                        <structure>
+                                            <property name="name">AUTH_SIGN1</property>
+                                            <text-property name="displayName">AUTH_SIGN1</text-property>
+                                            <expression name="expression" type="javascript">dataSetRow["AUTH_SIGN1"]</expression>
+                                            <property name="dataType">string</property>
+                                        </structure>
+                                    </list-property>
+                                    <property name="resultSetColumn">AUTH_SIGN1</property>
+                                </data>
+                                <label id="421">
+                                    <property name="fontFamily">sans-serif</property>
+                                    <property name="fontSize">8pt</property>
+                                    <property name="paddingTop">0pt</property>
+                                    <property name="paddingLeft">0pt</property>
+                                    <property name="paddingBottom">0pt</property>
+                                    <property name="paddingRight">0pt</property>
+                                    <property name="textAlign">center</property>
+                                    <text-property name="text">Authorised Signatory</text-property>
+                                </label>
+                            </cell>
+                            <cell id="416">
+                                <property name="paddingTop">0pt</property>
+                                <property name="paddingLeft">0pt</property>
+                                <property name="paddingBottom">0pt</property>
+                                <property name="paddingRight">0pt</property>
+                                <data id="420">
+                                    <property name="fontFamily">sans-serif</property>
+                                    <property name="fontSize">8pt</property>
+                                    <property name="paddingTop">0pt</property>
+                                    <property name="paddingLeft">0pt</property>
+                                    <property name="paddingBottom">0pt</property>
+                                    <property name="paddingRight">0pt</property>
+                                    <property name="dataSet">DataSet01</property>
+                                    <list-property name="boundDataColumns">
+                                        <structure>
+                                            <property name="name">AUTH_SIGN2</property>
+                                            <text-property name="displayName">AUTH_SIGN2</text-property>
+                                            <expression name="expression" type="javascript">dataSetRow["AUTH_SIGN2"]</expression>
+                                            <property name="dataType">string</property>
+                                        </structure>
+                                    </list-property>
+                                    <property name="resultSetColumn">AUTH_SIGN2</property>
+                                </data>
+                                <label id="422">
+                                    <property name="fontFamily">sans-serif</property>
+                                    <property name="fontSize">8pt</property>
+                                    <property name="paddingTop">0pt</property>
+                                    <property name="paddingLeft">0pt</property>
+                                    <property name="paddingBottom">0pt</property>
+                                    <property name="paddingRight">0pt</property>
+                                    <property name="textAlign">left</property>
+                                    <text-property name="text">Authorised Signatory</text-property>
+                                </label>
+                            </cell>
+                        </row>
+                    </grid>
+                    <label id="426">
+                        <text-property name="text">  </text-property>
+                    </label>
+                    <data id="427">
+                        <property name="fontFamily">sans-serif</property>
+                        <property name="textAlign">center</property>
+                        <property name="dataSet">DataSet01</property>
+                        <list-property name="boundDataColumns">
+                            <structure>
+                                <property name="name">MICR_LINE</property>
+                                <text-property name="displayName">MICR_LINE</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["MICR_LINE"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                        </list-property>
+                        <property name="resultSetColumn">MICR_LINE</property>
+                    </data>
+                </cell>
+            </row>
+        </grid>
+    </body>
+</report>
